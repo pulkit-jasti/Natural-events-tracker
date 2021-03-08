@@ -2,18 +2,17 @@ import { Renderer } from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
 import Icon from './Icon';
 
-const RenderMarkers = props => {
-	console.log(props.events.length);
-
+const RenderMarkers = ({ events }) => {
 	return (
 		<div>
-			{/* <Marker position={[0, 0]} icon={Icon}>
-				<Popup>
-					A pretty CSS3 popup. <br /> Easily customizable.
-				</Popup>
-			</Marker> */}
-			{/* {events.forEach(el => console.log(el))} */}
-			{/* {console.log(typeof events)} */}
+			{events.map(el => {
+				let coordinates = el.geometries[0].coordinates;
+				return (
+					<Marker position={[coordinates[1], coordinates[0]]} icon={Icon} key={el.id}>
+						<Popup>{el.title}</Popup>
+					</Marker>
+				);
+			})}
 		</div>
 	);
 };
