@@ -9,7 +9,7 @@ const RenderMarkers = ({ events }) => {
 			{events.map(el => {
 				console.log(el.categories[0].id);
 
-				if (el.geometries[0].type !== 'Polygon') {
+				if (el.geometries[0].type !== 'Polygon' && el.categories[0].id === 15) {
 					let coordinates = el.geometries[0].coordinates;
 					//console.log(coordinates, count++);
 
