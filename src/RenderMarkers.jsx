@@ -1,5 +1,5 @@
 import { Marker, Popup } from 'react-leaflet';
-import Icon from './Icon';
+import { icebergIcon, fireIcon, stormIcon, volcanoIcon } from './Icon.js';
 
 const RenderMarkers = ({ events }) => {
 	//console.log(events);
@@ -7,14 +7,32 @@ const RenderMarkers = ({ events }) => {
 	return (
 		<div>
 			{events.map(el => {
-				console.log(el.categories[0].id);
+				console.log(el.categories[0].title);
 
-				if (el.geometries[0].type !== 'Polygon' && el.categories[0].id === 15) {
+				if (el.geometries[0].type !== 'Polygon') {
 					let coordinates = el.geometries[0].coordinates;
-					//console.log(coordinates, count++);
+					let finalIcon;
+
+					switch (el.categories[0].id) {
+						case 15:
+							finalIcon = icebergIcon;
+							break;
+
+						case 8:
+							finalIcon = fireIcon;
+							break;
+
+						case 10:
+							finalIcon = stormIcon;
+							break;
+
+						case 12:
+							finalIcon = volcanoIcon;
+							break;
+					}
 
 					return (
-						<Marker position={[coordinates[1], coordinates[0]]} icon={Icon} key={el.id}>
+						<Marker position={[coordinates[1], coordinates[0]]} icon={finalIcon} key={el.id}>
 							<Popup>{el.title}</Popup>
 						</Marker>
 					);
