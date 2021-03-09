@@ -29,6 +29,10 @@ const RenderMarkers = ({ events }) => {
 						case 12:
 							finalIcon = volcanoIcon;
 							break;
+
+						default:
+							finalIcon = stormIcon;
+							break;
 					}
 
 					return (

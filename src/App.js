@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import RenderMarkers from './RenderMarkers';
@@ -17,15 +17,31 @@ function App() {
 	}, []);
 
 	return (
-		<div>
-			<MapContainer style={{ height: '100vh' }} center={[11.505, 10.09]} zoom={2} scrollWheelZoom={false}>
+		<main>
+			<header>
+				<h1>Natural Events Tracker</h1>
+			</header>
+			<MapContainer style={{ height: '100vh' }} center={[-21.505, 10.09]} zoom={2} scrollWheelZoom={false} zoomControl={false}>
 				<TileLayer
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 					url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+					noWrap={false}
 				/>
+				<ZoomControl position={'bottomright'} />
 				<RenderMarkers events={eventList} name='random name' />
 			</MapContainer>
-		</div>
+			<footer>
+				Built by <a href='https://linktr.ee/pulkit_jasti'>Pulkit Jasti</a> | Source: <a href='https://github.com/pulkit-jasti'>GitHub</a> |
+				Icons made by{' '}
+				<a href='https://www.freepik.com' title='Freepik'>
+					Freepik
+				</a>{' '}
+				from{' '}
+				<a href='https://www.flaticon.com/' title='Flaticon'>
+					www.flaticon.com
+				</a>
+			</footer>
+		</main>
 	);
 }
 

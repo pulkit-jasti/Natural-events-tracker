@@ -8,3 +8,53 @@
 	border: none;
 	background-color: rgba(255, 255, 255, 0);
 }
+
+main {
+	position: relative;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+
+	/* width: 100%; */
+	padding: 10px 30px;
+	background-color: rgb(37, 201, 99);
+	border-radius: 0 0 7px 7px;
+
+	color: #fff;
+
+	text-align: center;
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 1.3rem;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+
+	padding: 5px 10px;
+	background-color: rgb(37, 201, 99);
+	border-radius: 5px 5px 0 0;
+
+	font-size: 0.9rem;
+	font-family: sans-serif;
+	color: #fff;
+}
+
+a,
+a:visited,
+a:active {
+	color: #fff;
+}
