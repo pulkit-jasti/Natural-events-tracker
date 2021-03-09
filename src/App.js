@@ -7,10 +7,11 @@ function App() {
 	let [eventList, setEventList] = useState([]);
 
 	useEffect(() => {
-		fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/8')
+		fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
 			.then(res => res.json())
 			.then(data => {
 				setEventList(data.events);
+				//console.log(data.events);
 			})
 			.catch(console.log);
 	}, []);
