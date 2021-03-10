@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Natural-events-tracker/static/css/main.957bf896.chunk.css",
+    "main.js": "/Natural-events-tracker/static/js/main.27387080.chunk.js",
+    "main.js.map": "/Natural-events-tracker/static/js/main.27387080.chunk.js.map",
+    "runtime-main.js": "/Natural-events-tracker/static/js/runtime-main.aa3f98ac.js",
+    "runtime-main.js.map": "/Natural-events-tracker/static/js/runtime-main.aa3f98ac.js.map",
+    "static/css/2.c1e28d34.chunk.css": "/Natural-events-tracker/static/css/2.c1e28d34.chunk.css",
+    "static/js/2.498fe53c.chunk.js": "/Natural-events-tracker/static/js/2.498fe53c.chunk.js",
+    "static/js/2.498fe53c.chunk.js.map": "/Natural-events-tracker/static/js/2.498fe53c.chunk.js.map",
+    "index.html": "/Natural-events-tracker/index.html",
+    "static/css/2.c1e28d34.chunk.css.map": "/Natural-events-tracker/static/css/2.c1e28d34.chunk.css.map",
+    "static/css/main.957bf896.chunk.css.map": "/Natural-events-tracker/static/css/main.957bf896.chunk.css.map",
+    "static/js/2.498fe53c.chunk.js.LICENSE.txt": "/Natural-events-tracker/static/js/2.498fe53c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa3f98ac.js",
+    "static/css/2.c1e28d34.chunk.css",
+    "static/js/2.498fe53c.chunk.js",
+    "static/css/main.957bf896.chunk.css",
+    "static/js/main.27387080.chunk.js"
+  ]
+}
