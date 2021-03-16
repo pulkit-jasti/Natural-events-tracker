@@ -210,6 +210,10 @@ a:active {
 		width: 85vw;
 	}
 
+	.side-bar.closed {
+		left: -85vw;
+	}
+
 	.header-mobile {
 		top: -100px;
 	}
