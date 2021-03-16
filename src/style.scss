@@ -1,3 +1,5 @@
+$accent-color: #25c963;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -40,13 +42,15 @@ header {
 
 	/* width: 100%; */
 	padding: 10px 30px;
-	background-color: rgb(37, 201, 99);
+	background-color: $accent-color;
 	border-radius: 0 0 7px 7px;
 
 	color: #fff;
 
 	text-align: center;
 	font-family: sans-serif;
+
+	transition-duration: 1000ms;
 }
 
 h1 {
@@ -63,13 +67,15 @@ footer {
 	z-index: 1000;
 
 	padding: 5px 10px;
-	background-color: rgb(37, 201, 99);
+	background-color: $accent-color;
 	border-radius: 5px 5px 0 0;
 
 	font-size: 0.9rem;
 	font-family: sans-serif;
 	color: #fff;
 	text-align: center;
+
+	transition-duration: 1000ms;
 }
 
 a,
@@ -87,13 +93,23 @@ a:active {
 
 	height: 85vh;
 	width: 300px;
-
-	background-color: lightseagreen;
 	transition-duration: 1000ms;
 
-	h2 {
-		text-align: center;
-		padding: 15px 0;
+	.heading {
+		height: 8%;
+		margin-bottom: 15px;
+		display: flex;
+		justify-content: center;
+
+		h2 {
+			text-align: center;
+			font-weight: 700;
+			font-size: 1.7rem;
+			padding: 6px 15px;
+			background-color: $accent-color;
+			color: #fff;
+			border-radius: 7px;
+		}
 	}
 
 	button {
@@ -105,9 +121,11 @@ a:active {
 
 		height: 50px;
 		padding: 0 5px;
+		background-color: $accent-color;
 
 		border: none;
 		outline: none;
+		border-radius: 0 5px 5px 0;
 
 		font-size: 1.3rem;
 		transition-duration: inherit;
@@ -129,16 +147,25 @@ a:active {
 	}
 }
 
-.list-container {
+.overflow {
 	width: 100%;
 	height: 90%;
-	background-color: lightpink;
+
+	border-radius: 0 15px 15px 0;
+	overflow: hidden;
+}
+
+.list-container {
+	width: 100%;
+	height: 100%;
+	background-color: $accent-color;
 	padding: 10px;
 	position: relative;
 	overflow-y: auto;
 
 	.side-bar-list-item {
 		//height: 50px;
+		cursor: pointer;
 		width: 100%;
 		background-color: rgb(235, 235, 235);
 
@@ -147,6 +174,7 @@ a:active {
 		border-radius: 5px;
 
 		display: flex;
+		align-items: center;
 
 		img {
 			height: 32px;
@@ -158,13 +186,35 @@ a:active {
 			flex-direction: column;
 			justify-content: space-between;
 
+			h5 {
+				margin-bottom: 5px;
+			}
+
 			.coordinates {
 				display: flex;
 
 				p {
 					font-size: 0.8rem;
+
+					&:first-child {
+						margin-right: 10px;
+					}
 				}
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.side-bar {
+		width: 85vw;
+	}
+
+	.header-mobile {
+		top: -100px;
+	}
+
+	.footer-mobile {
+		bottom: -100px;
 	}
 }
