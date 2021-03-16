@@ -5,8 +5,8 @@ const SideBarItem = ({ name, lat, lon, imgURL }) => {
 			<div className='info-wrapper'>
 				<h5 className='event-name'>{name}</h5>
 				<div className='coordinates'>
-					<p className='lat'>Lat:{lat}</p>
-					<p className='lon'>Lon:{lon}</p>
+					<p className='lat'>Lat: {lat}</p>
+					<p className='lon'>Lon: {lon}</p>
 				</div>
 			</div>
 		</div>

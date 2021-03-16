@@ -17,24 +17,36 @@ const SideBar = ({ events }) => {
 			{console.log(events)}
 			<h2>Events List</h2>
 			<div className='list-container'>
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
-				<SideBarItem />
+				{events.map(el => {
+					if (el.geometries[0].type !== 'Polygon') {
+						let coordinates = el.geometries[0].coordinates;
+						let finalIcon;
+
+						switch (el.categories[0].id) {
+							case 15:
+								finalIcon = 'https://raw.githubusercontent.com/pulkit-jasti/Wildfire-tracker/master/icons/iceberg.svg';
+								break;
+
+							case 8:
+								finalIcon = 'https://raw.githubusercontent.com/pulkit-jasti/Wildfire-tracker/master/icons/fire.svg';
+								break;
+
+							case 10:
+								finalIcon = 'https://raw.githubusercontent.com/pulkit-jasti/Wildfire-tracker/master/icons/storm.svg';
+								break;
+
+							case 12:
+								finalIcon = 'https://raw.githubusercontent.com/pulkit-jasti/Wildfire-tracker/master/icons/volcano.svg';
+								break;
+
+							default:
+								finalIcon = 'https://raw.githubusercontent.com/pulkit-jasti/Wildfire-tracker/master/icons/storm.svg';
+								break;
+						}
+
+						return <SideBarItem key={el.id} imgURL={finalIcon} name={el.title} lat={coordinates[1]} lon={coordinates[0]} />;
+					}
+				})}
 			</div>
 		</div>
 	);
