@@ -15,7 +15,27 @@ const SideBar = ({ events }) => {
 				<div>&#9660;</div>
 			</button>
 			{console.log(events)}
-			<SideBarItem />
+			<h2>Events List</h2>
+			<div className='list-container'>
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+				<SideBarItem />
+			</div>
 		</div>
 	);
 };

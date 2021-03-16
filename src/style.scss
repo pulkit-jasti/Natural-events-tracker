@@ -2,8 +2,26 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: sans-serif;
+}
+::-webkit-scrollbar {
+	width: 7px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #aaa;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #999;
+}
 .leaflet-div-icon {
 	border: none;
 	background-color: rgba(255, 255, 255, 0);
@@ -73,6 +91,11 @@ a:active {
 	background-color: lightseagreen;
 	transition-duration: 1000ms;
 
+	h2 {
+		text-align: center;
+		padding: 15px 0;
+	}
+
 	button {
 		position: absolute;
 		top: 50%;
@@ -102,6 +125,46 @@ a:active {
 	button {
 		div {
 			transform: rotate(-90deg);
+		}
+	}
+}
+
+.list-container {
+	width: 100%;
+	height: 90%;
+	background-color: lightpink;
+	padding: 10px;
+	position: relative;
+	overflow-y: auto;
+
+	.side-bar-list-item {
+		//height: 50px;
+		width: 100%;
+		background-color: rgb(235, 235, 235);
+
+		padding: 10px;
+		margin: 10px 0;
+		border-radius: 5px;
+
+		display: flex;
+
+		img {
+			height: 32px;
+		}
+
+		.info-wrapper {
+			margin-left: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.coordinates {
+				display: flex;
+
+				p {
+					font-size: 0.8rem;
+				}
+			}
 		}
 	}
 }
