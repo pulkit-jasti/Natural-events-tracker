@@ -7,8 +7,6 @@ const RenderMarkers = ({ events }) => {
 	return (
 		<div>
 			{events.map(el => {
-				console.log(el.categories[0].title);
-
 				if (el.geometries[0].type !== 'Polygon') {
 					let coordinates = el.geometries[0].coordinates;
 					let finalIcon;

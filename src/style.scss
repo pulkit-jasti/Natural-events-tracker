@@ -51,10 +51,57 @@ footer {
 	font-size: 0.9rem;
 	font-family: sans-serif;
 	color: #fff;
+	text-align: center;
 }
 
 a,
 a:visited,
 a:active {
 	color: #fff;
+}
+
+.side-bar {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 1001;
+
+	height: 85vh;
+	width: 300px;
+
+	background-color: lightseagreen;
+	transition-duration: 1000ms;
+
+	button {
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		transform: translateY(-50%);
+		z-index: inherit;
+
+		height: 50px;
+		padding: 0 5px;
+
+		border: none;
+		outline: none;
+
+		font-size: 1.3rem;
+		transition-duration: inherit;
+
+		div {
+			transition-duration: inherit;
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.side-bar.closed {
+	left: -300px;
+
+	button {
+		div {
+			transform: rotate(-90deg);
+		}
+	}
 }

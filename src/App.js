@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import RenderMarkers from './RenderMarkers';
+import SideBar from './components/SideBar';
 
 function App() {
 	let [eventList, setEventList] = useState([]);
@@ -21,6 +22,7 @@ function App() {
 			<header>
 				<h1>Natural Events Tracker</h1>
 			</header>
+			<SideBar events={eventList} />
 			<MapContainer style={{ height: '100vh' }} center={[-21.505, 10.09]} zoom={2} scrollWheelZoom={false} zoomControl={false}>
 				<TileLayer
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
